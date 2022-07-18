@@ -4,7 +4,111 @@
       "todo": "learn react",
       "checked": false,
       "id": 1
+    },
+    {
+      "todo": "learn semantic HTML",
+      "checked": false,
+      "id": 2
+    },
+    {
+      "todo": "Learn javascript",
+      "checked": false,
+      "id": 3
+    },
+    {
+      "todo": "learn css",
+      "checked": false,
+      "id": 4
+    },
+    {
+      "todo": "hello",
+      "checked": false,
+      "id": 5
+    },
+    {
+      "todo": "hello",
+      "checked": false,
+      "id": 6
+    },
+    {
+      "todo": "me",
+      "checked": false,
+      "id": 7
+    },
+    {
+      "todo": "mine",
+      "checked": false,
+      "id": 8
+    },
+    {
+      "todo": "mine",
+      "checked": false,
+      "id": 9
+    },
+    {
+      "todo": "my",
+      "checked": false,
+      "id": 10
+    },
+    {
+      "todo": "min",
+      "checked": false,
+      "id": 11
+    },
+    {
+      "todo": "kk",
+      "checked": false,
+      "id": 12
+    },
+    {
+      "todo": "thy",
+      "checked": false,
+      "id": 13
+    },
+    {
+      "todo": "thy",
+      "checked": false,
+      "id": 14
+    },
+    {
+      "todo": "thy",
+      "checked": false,
+      "id": 15
+    },
+    {
+      "todo": "hhh",
+      "checked": false,
+      "id": 16
+    },
+    {
+      "todo": "hell",
+      "checked": false,
+      "id": 17
+    },
+    {
+      "todo": "hh",
+      "checked": false,
+      "id": 18
+    },
+    {
+      "todo": "um",
+      "checked": false,
+      "id": 19
+    },
+    {
+      "todo": "me",
+      "checked": false,
+      "id": 20
+    },
+    {
+      "todo": "learn something",
+      "checked": false,
+      "id": 21
+    },
+    {
+      "todo": "give dog food",
+      "checked": false,
+      "id": 22
     }
-    
   ]
 }

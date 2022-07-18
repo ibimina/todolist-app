@@ -1,6 +1,14 @@
 import close from "../../images/icon-cross.svg";
-//  import { useEffect, useState } from "react";
+
 export default function Todo({ todos }) {
+  // const handleClick = (id) => {
+//   console.log(id);
+//   setTodos(
+//     todos.filter((todo) => {
+//       return id !== todo.id;
+//     })
+//   );
+// };
   return (
     <>
       <ul>
