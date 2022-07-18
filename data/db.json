@@ -4,36 +4,7 @@
       "todo": "learn react",
       "checked": false,
       "id": 1
-    },
-    {
-      "todo": "hho",
-      "checked": false,
-      "id": 2
-    },
-    {
-      "todo": "helo",
-      "checked": false,
-      "id": 3
-    },
-    {
-      "todo": "learn",
-      "checked": false,
-      "id": 4
-    },
-    {
-      "todo": "get",
-      "checked": false,
-      "id": 5
-    },
-    {
-      "todo": "kk",
-      "checked": false,
-      "id": 6
-    },
-    {
-      "todo": "tth",
-      "checked": false,
-      "id": 7
     }
+    
   ]
 }
