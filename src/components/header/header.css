@@ -1,0 +1,95 @@
+header{
+    background-image: url(./../../images/bg-mobile-light.jpg);
+}
+header[data-img="true"]{
+    background-image: url(../../images/bg-mobile-dark.jpg);
+}
+.bg-img{
+    background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+header{
+    padding: 3.5rem 1rem;
+    min-height: 14rem;
+
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     margin-bottom:7rem ;
+}
+h1{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 15px;
+    font-weight: 700;
+    font-size: inherit;
+}
+.sr-only{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+.theme{
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/icon-moon.svg);
+background-color: transparent;
+}
+.theme[aria-expanded="true"]{
+    background-image: url(./../../images/icon-sun.svg);
+}
+/* form{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    padding: .7rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: .7rem;
+    border-radius: 5px;
+    margin-top:2rem ;
+    /* justify-content: space-between; */
+/* }  */
+#newtodo{
+  width: 100%; 
+  padding: .3rem; 
+  border: 0;
+color: hsl(236, 9%, 61%);
+}
+
+label{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid rgb(192, 190, 190);
+    padding: .6rem;
+}
+#addtodolist:checked{
+background-image: url(../../images/icon-check.svg),linear-gradient(to right,hsl(192, 100%, 67%) ,hsl(280, 87%, 65%));
+background-repeat: no-repeat;
+background-position: center;
+}
+#addtodo[aria-checked="true"]{
+background-image: url(../../images/icon-check.svg),linear-gradient(to right,hsl(192, 100%, 67%) ,hsl(280, 87%, 65%));
+background-repeat: no-repeat;
+background-position: center;
+}
+@media (min-width:45rem) {
+    header{
+        background-image: url(./../../images/bg-desktop-light.jpg);
+    }
+}
