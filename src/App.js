@@ -1,27 +1,14 @@
 import Header from "./components/header/Header";
 import "./App.css";
 import Main from "./components/shared/Main";
-// import { useEffect, useState } from "react";
+
 
 function App() {
-  // const [todos, setTodos] = useState([]);
-  // const [url, setUrl] = useState("http://localhost:8000/todos");
- 
-  // useEffect(() => {
-  //   fetch(" http://localhost:8000/todos")
-  //   .then((res) => res.json())
-  //   .then((d)=>setTodos(d))
-
-  // }, []);
-
-
 
   return (
     <>
       <Header />
-      <Main
-      //  todos={todos} 
-       />
+      <Main />
     </>
   );
 }

@@ -1,44 +1,26 @@
 import close from "../../images/icon-cross.svg";
 //  import { useEffect, useState } from "react";
-export default function Todo({
-  todos
-  // handleClick,
-  // handleCheck,
-  // handleAll,
-  // all,
-  // active,
-  // complete,
-  // handleActive,
-  // handleComplete,
-}) {
-
-  
+export default function Todo({ todos }) {
   return (
     <>
       <ul>
-        {
-          todos.map((todo) => (
-            <li id={todo.id} key={todo.id} className="list-style border">
-              <label htmlFor="addtodo">
-                <input
-                  type="checkbox"
-                  name="addtodolist"
-                  id="addtodolist"
-                 
-                  // value={todo.checked}
-                />
-              </label>
+        {todos.map((todo) => (
+          <li id={todo.id} key={todo.id} className="list-style border">
+            <label htmlFor="addtodo">
+              <input
+                type="checkbox"
+                name="addtodolist"
+                id="addtodolist"
 
-              <p className={`todo ${todo.checked ? "linethrough" : ""}`}>
-                {todo.todo}
-              </p>
-              <img
-                src={close}
-                alt="a close icon to remove todo list"
-                
               />
-            </li>
-          ))}
+            </label>
+
+            <p className={`todo ${todo.checked ? "linethrough" : ""}`}>
+              {todo.todo}
+            </p>
+            <img src={close} alt="a close icon to remove todo list" />
+          </li>
+        ))}
       </ul>
 
       <div className="length-wrap">
@@ -47,19 +29,10 @@ export default function Todo({
         <p className="clr-completed">Clear completed</p>
       </div>
       <div className="show-wrap">
-        <button className="all">
-          All
-        </button>
-        <button className="active" >
-          Active
-        </button>
+        <button className="all">All</button>
+        <button className="active">Active</button>
 
-        <button
-          className="completed"
-          
-        >
-          Completed
-        </button>
+        <button className="completed">Completed</button>
       </div>
     </>
   );

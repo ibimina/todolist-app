@@ -4,6 +4,8 @@ export default function Create() {
   const [myTodo, setMyTodo] = useState("");
   const [checkbox, setCheckbox] = useState(false);
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -14,12 +16,12 @@ export default function Create() {
       };
       setCheckbox(true);
 
-      fetch("http://localhost:8000/todos", {
+      fetch("http://localhost:3000/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(todo),
       });
-      // window.location.reload(false)
+      window.location.reload(false)
       setInterval(() => {
         setCheckbox(false);
       }, 500);

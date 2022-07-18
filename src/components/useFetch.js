@@ -29,6 +29,6 @@ export const useFetch = (url) => {
         }
       });
     return () => abortConst.abort();
-  }, [url,isLoading]);
+  }, [url]);
   return { todos, isLoading, error };
 };
