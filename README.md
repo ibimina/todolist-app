@@ -34,14 +34,14 @@ Users should be able to:
 
 ### Screenshot
 
-![mobile](Capture097.pmn)
-![Desktop](Capture097.png)
+![mobile](Capture097.png)
+![Desktop](Capture098.png)
 
 
 ### Links
 
 - Solution URL: [https://github.com/ibimina/todolist-app](https://github.com/ibimina/todolist-app)
-- Live Site URL: [https://ibimina.github.io/todolist-app](https://ibimina.github.io/todolist-app)
+- Live Site URL: [https://ibimina.github.io/todolist-app/](https://ibimina.github.io/todolist-app/)
 
 ## My process
 
