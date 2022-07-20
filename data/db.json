@@ -1,24 +1,19 @@
 {
   "todos": [
     {
-      "todo": "Lear HTml",
-      "checked": true,
-      "id": 1
-    },
-    {
-      "todo": "learn CSS",
-      "checked": true,
-      "id": 2
-    },
-    {
-      "todo": "Learn javascript",
+      "todo": "Learn CSS",
       "checked": false,
-      "id": 3
+      "id": 5
     },
     {
       "todo": "learn semantic HTML",
       "checked": false,
-      "id": 4
+      "id": 6
+    },
+    {
+      "todo": "Learn javascript",
+      "checked": false,
+      "id": 7
     }
   ]
 }

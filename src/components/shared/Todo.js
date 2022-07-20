@@ -67,23 +67,14 @@ export default function Todo({ todos, add }) {
       //  console.log(lenn);
     }
   };
-  // const reorder= (tasks,sourceIndex,destinationIndex)=>{
-  //   const result = [...tasks]
-  //    const [itemm] = result.splice(sourceIndex, 1);
-  //    result.splice(destinationIndex, 0, itemm);
-  //    return result
-  // }
-  // const handleDragEnd = (result) => {
-  //   if (!result.destination) return
-  //     setMyTodo((myTodo)=> reorder(myTodo,result.source.index,result.destination.index))
+ 
 
-  // };
   const handleOnDrag = (result) => {
-   const  ii = Array.from(myTodo);
-    const [iii] = ii.splice(result.source.index, 1);
-    ii.splice(result.destination.index, 0, iii);
+   const  orderNew = Array.from(myTodo);
+    const [update] = orderNew.splice(result.source.index, 1);
+    orderNew.splice(result.destination.index, 0, update);
 
-    setMyTodo(ii);
+    setMyTodo(orderNew);
 
   };
  

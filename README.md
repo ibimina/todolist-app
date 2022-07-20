@@ -56,28 +56,66 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- I learnt to fetch data from a json file using the following methods
+ GET - to fetch out data to be mapped in the li tag
+ ```js
+  useEffect(() => {
+    const abortConst = new AbortController();
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+    fetch(url, { signal: abortConst.signal })
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("could not fetch data for the resource");
+        }
+        return res.json();
+      })
+      .then((d) => {
+        setTodos(d);
+        setIsLoading(false);
+        setError(null);
+      })
+      .catch((err) => {
+        if (err.name === "AbortError") {
+          console.log("fetch abort");
+        } else {
+          setError(err.message);
+          setIsLoading(false);
+        }
+      });
+    return () => abortConst.abort();
+  }, [url]);
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+ POST - to add new data
+ ```js
+ fetch("http://localhost:3000/todos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(todo),
+      })
 ```
+ PUT - to update a value 
+ ```js
+ fetch("http://localhost:3000/todos/" + id, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(ne),
+    })
+```
+ DELETE - to delete 
+```jsx
+  fetch("http://localhost:3000/todos/" + id, {
+          method: "DELETE",
+        }).
+```
+- I learnt how to out data that fullfills a condition  using json url 
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+ onClick={() => add("http://localhost:3000/todos?checked=false")
 ```
 
+- I also learnt how to drag and drop items using beautifully dnd dependency
+For this to work properly I had to remove the React.strictMode and set the draggable id to a string 
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 
 
