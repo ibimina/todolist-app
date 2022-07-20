@@ -14,7 +14,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -121,7 +121,10 @@ Continous learning of React framework, how to fetch data from a json file
 
 ### Useful resources
 
-- [How to create a local json file and watch it update](https://www.youtube.com/watch?v=eao7ABGFUXs) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [How to create a local json file and watch it update](https://www.youtube.com/watch?v=eao7ABGFUXs) - This helped me for in creating json file. I really liked this pattern and will use it going forward.
+
+- [Learning the different methods to fetch data from a json file](https://jasonwatmore.com/post/2020/02/01/react-fetch-http-post-request-examples) - This helped me to add(post method) new todos,update(put method) values of the todo, delete(delete method) todos and post n
+
 - [How to add a drag and drop listed items](https://www.freecodecamp.org/news/how-to-add-drag-and-drop-in-react-with-react-beautiful-dnd/amp/) - This is an amazing article which helped me finally understand drag and drop list items. I'd recommend it to anyone still learning this concept.
 
 
@@ -130,9 +133,6 @@ Continous learning of React framework, how to fetch data from a json file
 - Frontend Mentor - [@ibimina](https://www.frontendmentor.io/profile/ibimina)
 - Twitter - [@ibiminaaH](https://www.twitter.com/ibiminaaH)
 
-
-
-## Acknowledgments
 
 
 
