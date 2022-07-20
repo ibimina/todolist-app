@@ -1,0 +1,128 @@
+main {
+  position: relative;
+  top: -11rem;
+  /* padding: 1.5rem; */
+  /* width: 100%; */
+  /* max-width: 360px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con {
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+} */
+ul {
+  list-style: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  background-color: var(--bg-list);
+}
+
+.list-style {
+  width: 100%;
+  position: relative;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--todo-clor);
+  padding: 1rem;
+  /* color: var(--todo-clr); */
+}
+#newtodo {
+  background-color: transparent;
+}
+.border {
+  border-bottom: 1px solid grey;
+}
+.color {
+  background-color: var(--bg-list);
+  border-radius: 5px;
+}
+.todo {
+  width: 100%;
+}
+.linethrough {
+  text-decoration: line-through;
+  color: var(--com-to);
+}
+.length-wrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-list);
+  color: var(--todo-clr);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 6rem;
+}
+.show-wrap {
+  margin-top: 1rem;
+  background-color: var(--bg-list);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 1rem;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+}
+.footer {
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--drag-clr);
+}
+button {
+  color: var(--active-clr);
+  background-color: transparent;
+  border: 0;
+}
+button:active,
+button:focus {
+  color: var(--active-text);
+}
+
+@media (min-width: 50rem) {
+  button:hover {
+    color: var(--todo-clor);
+    cursor: pointer;
+  }
+  input[type="checkbox"]:hover {
+    cursor: pointer;
+  }
+  header {
+    min-height: 15rem;
+  }
+  .con {
+    max-width: 700px;
+  }
+  .todos {
+    cursor: pointer;
+  }
+ 
+  .length-wrap {
+    align-items: center;
+  }
+  .show-wrap {
+    position: relative;
+    top: auto;
+    margin-top: 0;
+    padding: 0;
+  }
+  .footer{
+    margin-top: 2rem;
+  }
+}

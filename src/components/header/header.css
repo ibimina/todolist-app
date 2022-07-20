@@ -11,14 +11,16 @@ background-size: cover;
 }
 header{
     padding: 3.5rem 1rem;
-    min-height: 14rem;
+    min-height: 16rem;
 
 }
 .title{
     display: flex;
     justify-content: space-between;
     align-items: center;
-     margin-bottom:7rem ;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
 }
 h1{
     text-transform: uppercase;
@@ -43,19 +45,7 @@ background-color: transparent;
 .theme[aria-expanded="true"]{
     background-image: url(./../../images/icon-sun.svg);
 }
-/* form{
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-    padding: .7rem;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: .7rem;
-    border-radius: 5px;
-    margin-top:2rem ;
-    /* justify-content: space-between; */
-/* }  */
+
 #newtodo{
   width: 100%; 
   padding: .3rem; 

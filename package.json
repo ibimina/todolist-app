@@ -1,5 +1,6 @@
 {
   "name": "todolist-app",
+  "homepage": "https://ibimina.github.oi/todolist-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +9,15 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

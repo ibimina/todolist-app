@@ -1,32 +1,28 @@
 import Header from "./components/header/Header";
 import "./App.css";
-import Main from "./components/shared/Main";
-
+import {  useState } from "react";
+import Main from "./components/main/Main";
 
 function App() {
+  const [theme,setTheme] = useState("false");
 
+  const changeTheme =()=>{
+  if (theme==="false") {
+    setTheme("true")
+  } else {
+    setTheme("false");
+  }
+}
   return (
-    <>
-      <Header />
-      <Main />
-    </>
+    <div className={`app ${theme === "false" ? "light" : "dark"}`}>
+      <Header theme={theme} />
+      <Main changeTheme={changeTheme} theme={theme} />
+    </div>
   );
 }
 
 export default App;
 
-//  <Main
-//    addTodo={addTodo}
-//    todos={todos}
-//    handleClick={handleClick}
-//    // handleCheck={handleCheck}
-//    all={all}
-//    active={active}
-//    complete={complete}
-//    handleActive={handleActive}
-//    handleComplete={handleComplete}
-//    handleAll={handleAll}
-//  />;
 //   const [all, setAll] = useState("true");
 
 //   const [active, setActive] = useState("false");

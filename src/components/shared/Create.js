@@ -11,8 +11,7 @@ export default function Create({ add }) {
       const todo = {
         todo: myTodo,
         checked: false,
-      }
-      
+      } 
       setCheckbox(true);
       
       fetch("http://localhost:3000/todos", {
@@ -21,7 +20,7 @@ export default function Create({ add }) {
         body: JSON.stringify(todo),
       }).then(() => add("http://localhost:3000/todos"));
       
-      console.log(todo)
+      // console.log(todo)
       setInterval(() => {
         setCheckbox(false);
       }, 500);
