@@ -112,17 +112,17 @@ Users should be able to:
  onClick={() => add("http://localhost:3000/todos?checked=false")
 ```
 
-- I also learnt how to drag and drop items using beautifully dnd dependency
-For this to work properly I had to remove the React.strictMode and set the draggable id to a string 
+- I also learnt how to drag and drop items using beautiful dnd
+For this to work properly I had to remove the React.strictMode and set the draggable id to a string
+Although I discovered that when I click the active and completed buttons it reformats I guess its because I am fetcching from the json file, I tried it with an array but it dtill behaves the same. I will research more to discover why, when I do I will update the code
 
 ### Continued development
-
-
+Continous learning of React framework, how to fetch data from a json file
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [How to create a local json file and watch it update](https://www.youtube.com/watch?v=eao7ABGFUXs) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [How to add a drag and drop listed items](https://www.freecodecamp.org/news/how-to-add-drag-and-drop-in-react-with-react-beautiful-dnd/amp/) - This is an amazing article which helped me finally understand drag and drop list items. I'd recommend it to anyone still learning this concept.
 
 
 ## Author
@@ -134,6 +134,6 @@ For this to work properly I had to remove the React.strictMode and set the dragg
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
 
 
