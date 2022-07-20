@@ -119,6 +119,7 @@ Although I discovered that when I click the active and completed buttons it refo
 ### Continued development
 Continous learning of React framework, how to fetch data from a json file
 
+
 ### Useful resources
 
 - [How to create a local json file and watch it update](https://www.youtube.com/watch?v=eao7ABGFUXs) - This helped me for in creating json file. I really liked this pattern and will use it going forward.
