@@ -1,9 +1,6 @@
 main {
   position: relative;
   top: -11rem;
-  /* padding: 1.5rem; */
-  /* width: 100%; */
-  /* max-width: 360px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,11 +12,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
 }
-/* section {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-} */
+
 ul {
   list-style: none;
   border-radius: 5px;
@@ -36,7 +29,7 @@ ul {
   gap: 0.7rem;
   color: var(--todo-clor);
   padding: 1rem;
-  /* color: var(--todo-clr); */
+
 }
 #newtodo {
   background-color: transparent;
@@ -90,6 +83,7 @@ button {
   background-color: transparent;
   border: 0;
 }
+
 button:active,
 button:focus {
   color: var(--active-text);
@@ -109,10 +103,12 @@ button:focus {
   .con {
     max-width: 700px;
   }
-  .todos {
+  .todo{
     cursor: pointer;
   }
- 
+ .length,.clr-completed{
+    cursor: pointer;
+ }
   .length-wrap {
     align-items: center;
   }

@@ -38,7 +38,7 @@ export default function Todo({ todos, add }) {
 
   const total = () => {
     let len = [];
- 
+
     for (let i = 0; i < todos.length; i++) {
       if (todos[i].checked === false) {
         // console.log(todos[i]);
@@ -47,7 +47,7 @@ export default function Todo({ todos, add }) {
       // console.log(len);
       // console.log(len.length);
     }
-let lenn = len.length;
+    let lenn = len.length;
     return lenn;
   };
 
@@ -76,15 +76,41 @@ let lenn = len.length;
   // const handleDragEnd = (result) => {
   //   if (!result.destination) return
   //     setMyTodo((myTodo)=> reorder(myTodo,result.source.index,result.destination.index))
-  
-  // };
-  const handleOnDrag = (result)=>{
-const ii= Array.from(myTodo)
-const [iii] = ii.splice(result.source.index,1)
-ii.splice(result.destination.index,0,iii) 
 
-setMyTodo(ii)
-  }
+  // };
+  const handleOnDrag = (result) => {
+   const  ii = Array.from(myTodo);
+    const [iii] = ii.splice(result.source.index, 1);
+    ii.splice(result.destination.index, 0, iii);
+
+    setMyTodo(ii);
+
+  };
+ 
+
+  // const handleActive = () => {
+  //     setMyTodo(
+  //   ii.filter((todo) => {
+  //     return todo.checked !== true;
+  //   }))
+   
+  // };
+
+  //  const handleCompleted = () => {
+  //    setMyTodo(
+  //      todos.filter((todo) => {
+  //        return todo.checked === true;
+  //      })
+  //    );
+  //  };
+  //   const handleAll = () => {
+  //    setMyTodo(
+  //      todos.filter((todo) => {
+  //        return todo;
+  //      })
+  //    );
+  //   };
+ 
   return (
     <>
       <DragDropContext onDragEnd={handleOnDrag}>
@@ -105,7 +131,7 @@ setMyTodo(ii)
                     {(provided) => (
                       <li
                         id={todo.id}
-                        // key={todo.id}
+            
                         className="list-style border"
                         ref={provided.innerRef}
                         {...provided.draggableProps}
@@ -131,7 +157,7 @@ setMyTodo(ii)
                           {todo.todo}
                         </p>
                         <p>{todo.checked}</p>
-                        {/* <p>{myTodo}</p> */}
+                    
                         <img
                           src={close}
                           alt="a close icon to remove todo list"
@@ -151,83 +177,50 @@ setMyTodo(ii)
 
         <p className="clr-completed">Clear completed</p>
       </div> */}
-      
-        <div className="length-wrap">
-          {todos && <p className="length oo">{total()} items Left</p>}
-          <div className="show-wrap">
-            <button
-              className="all"
-              onClick={() => add("http://localhost:3000/todos")}
-            >
-              All
-            </button>
-            <button
-              className="active"
-              onClick={() => add("http://localhost:3000/todos?checked=false")}
-            >
-              Active
-            </button>
 
-            <button
-              className="completed"
-              onClick={() => add("http://localhost:3000/todos?checked=true")}
-            >
-              Completed
-            </button>
-          </div>
-          <p className="clr-completed" onClick={() => clearComplete()}>
-            Clear completed
+      <div className="length-wrap">
+        {todos && (
+          <p className="length oo">
+            {total()} {`${total() > "1" ? "items" : "item"}`} Left
           </p>
+        )}
+        <div className="show-wrap">
+          <button
+            className="all"
+            onClick={() => add("http://localhost:3000/todos")}
+          >
+            All
+          </button>
+          {/* <button className="all" onClick={handleAll}>
+            All
+          </button> */}
+          <button
+            className="active"
+            onClick={() => add("http://localhost:3000/todos?checked=false")}
+          >
+            Active
+          </button>
+          {/* <button
+            className="active"
+            onClick={handleActive}
+          >
+            Active
+          </button> */}
+
+          <button
+            className="completed"
+            onClick={() => add("http://localhost:3000/todos?checked=true")}
+          >
+            Completed
+          </button>
+          {/* <button className="completed" onClick={handleCompleted}>
+            completed
+          </button> */}
         </div>
-      
+        <p className="clr-completed" onClick={() => clearComplete()}>
+          Clear completed
+        </p>
+      </div>
     </>
   );
 }
-//  {
-//    )       todos.map((todo) => (
-//             <li id={todo.id} key={todo.id} className="list-style border">
-//               <label htmlFor="addtodo">
-//                 <input
-//                   type="checkbox"
-//                   name="addtodolist"
-//                   id="addtodolist"
-//                   onClick={() => handleCheck(todo.id)}
-//                   // value={todo.checked}
-//                 />
-//               </label>
-
-//               <p className={`todo ${todo.checked ? "linethrough" : ""}`}>
-//                 {todo.todo}
-//               </p>
-//               <img
-//                 src={close}
-//                 alt="a close icon to remove todo list"
-//                 onClick={() => handleClick(todo.id)}
-//               />
-//             </li>
-//           ))}
-//       </ul>
-
-//       <div className="length-wrap">
-//         {todos && <p className="length">{todos.length} items Left</p>}
-
-//         <p className="clr-completed">Clear completed</p>
-//       </div>
-//       <div className="show-wrap">
-//         <button className="all" aria-pressed={all} onClick={handleAll}>
-//           All
-//         </button>
-//         <button className="active" aria-pressed={active} onClick={handleActive}>
-//           Active
-//         </button>
-
-//         <button
-//           className="completed"
-//           aria-pressed={complete}
-//           onClick={handleComplete}
-//         >
-//           Completed
-//         </button>
-//       </div>
-//     </>
-//   );

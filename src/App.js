@@ -23,12 +23,7 @@ function App() {
 
 export default App;
 
-//   const [all, setAll] = useState("true");
 
-//   const [active, setActive] = useState("false");
-//   const [complete, setComplete] = useState("false");
-//  const [isLoading, setIsLoading] = useState(false);
-//  const [error, setError] = useState(null);
 
 // const handleClick = (id) => {
 //   console.log(id);
@@ -56,18 +51,4 @@ export default App;
 //   setTodos(mapped);
 // };
 
-// const handleAll = () => {
-//   setAll("true");
-//   setActive("false");
-//   setComplete("false");
-// };
-// const handleActive = () => {
-//   setActive("true");
-//   setComplete("false");
-//   setAll("false");
-// };
-// const handleComplete = () => {
-//   setActive("false");
-//   setComplete("true");
-//   setAll("false");
-// };
+

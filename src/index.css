@@ -14,30 +14,30 @@ body {
   font-size: 18px;
   overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
-  /* background-color: hsl(0, 0%, 98%); */
+
 }
 .app {
-  background-color: var(--bg-color); /* background-color: hsl(0, 0%, 98%); */
-min-height: 100vh;
+  background-color: var(--bg-color);
+  min-height: 100vh;
 }
 
-:root{
+.light {
   --bg-color: hsl(236, 33%, 92%);
   --bg-list: hsl(0, 0%, 98%);
   --active-text: hsl(220, 98%, 61%);
-  --drag-clr: hsl(236, 9%, 61%) ;
+  --drag-clr: hsl(236, 9%, 61%);
   --todo-clr: hsl(236, 9%, 61%);
---todo-clor: hsl(235, 21%, 11%);
---active-clr:  hsl(236, 9%, 61%);
---com-to:hsl(233, 11%, 84%);
+  --todo-clor: hsl(235, 21%, 11%);
+  --active-clr: hsl(236, 9%, 61%);
+  --com-to: hsl(233, 11%, 84%);
 }
 .dark {
   --bg-color: hsl(235, 21%, 11%);
   --bg-list: hsl(235, 24%, 19%);
   --active-text: hsl(220, 98, 61%);
   --drag-clr: hsl(234, 11%, 52%);
-  --todo-clr:hsl(237, 14%, 26%) ;
---active-clr:   hsl(234, 11%, 52%);
---todo-clor:hsl(234, 39%, 85%);
---com-to:hsl(233, 14%, 35%);
+  --todo-clr: hsl(237, 14%, 26%);
+  --active-clr: hsl(234, 11%, 52%);
+  --todo-clor: hsl(234, 39%, 85%);
+  --com-to: hsl(233, 14%, 35%);
 }

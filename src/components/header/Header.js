@@ -5,7 +5,6 @@ function Header({theme}) {
     return (
       <header className="bg-img" data-img={theme}>
       
-      
       </header>
     );
 }

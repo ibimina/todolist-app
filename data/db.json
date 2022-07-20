@@ -1,7 +1,12 @@
 {
   "todos": [
     {
-      "todo": "Learn CSS",
+      "todo": "Lear HTml",
+      "checked": true,
+      "id": 1
+    },
+    {
+      "todo": "learn CSS",
       "checked": true,
       "id": 2
     },
@@ -11,7 +16,7 @@
       "id": 3
     },
     {
-      "todo": "learn react",
+      "todo": "learn semantic HTML",
       "checked": false,
       "id": 4
     }
