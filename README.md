@@ -57,9 +57,15 @@ Users should be able to:
 ### What I learned
 
 - I learnt to fetch data from a json file using the following methods
- GET - to fetch out data to be mapped in the li tag
+ GET - to fetch out data to be mapped in the li tag using a custom hook that cause  redendering when a functionis called
+
  ```js
-  useEffect(() => {
+
+export const useFetch = (url) => {
+  const [todos, setTodos] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const getdata = (url) => {
     const abortConst = new AbortController();
 
     fetch(url, { signal: abortConst.signal })
@@ -83,8 +89,15 @@ Users should be able to:
         }
       });
     return () => abortConst.abort();
-  }, [url]);
-```
+  };
+  useEffect(() => {
+    getdata(url);
+  }, [url]);  
+  return [{ todos, isLoading, error }, getdata];
+};
+
+ ```
+
  POST - to add new data
  ```js
  fetch("http://localhost:3000/todos", {
@@ -109,7 +122,7 @@ Users should be able to:
 ```
 - I learnt how to out data that fullfills a condition  using json url 
 ```js
- onClick={() => add("http://localhost:3000/todos?checked=false")
+ onClick={() => getdata("http://localhost:3000/todos?checked=false")
 ```
 
 - I also learnt how to drag and drop items using beautiful dnd

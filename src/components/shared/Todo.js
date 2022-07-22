@@ -2,20 +2,20 @@ import close from "../../images/icon-cross.svg";
 import { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-export default function Todo({ todos, add }) {
+export default function Todo({ todos, getdata}) {
   const [myTodo, setMyTodo] = useState(null);
-
+// const { getdata } = useFetch("http://localhost:3000/todos");
   const handleCheckBox = (id, todo, checked) => {
-    let ne;
+    let updateCheckedTodo;
     if (checked === false) {
-      console.log("p");
-      ne = {
+      // console.log("p");
+      updateCheckedTodo = {
         todo: todo,
         checked: true,
         id: id,
       };
     } else {
-      ne = {
+      updateCheckedTodo = {
         todo: todo,
         checked: false,
         id: id,
@@ -25,30 +25,33 @@ export default function Todo({ todos, add }) {
     fetch("http://localhost:3000/todos/" + id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(ne),
-    }).then(() => add("http://localhost:3000/todos"));
-
+      body: JSON.stringify(updateCheckedTodo),
+    })
+    .then(() => getdata("http://localhost:3000/todos"));
+    // .then(() => add("http://localhost:3000/todos"));
     //  console.log(ne)
   };
   const handleClick = (id) => {
     fetch("http://localhost:3000/todos/" + id, {
       method: "DELETE",
-    }).then(() => add("http://localhost:3000/todos"));
+    })
+    .then(() => getdata("http://localhost:3000/todos"));
+    // .then(() => add("http://localhost:3000/todos"));
   };
 
   const total = () => {
-    let len = [];
+    let collectionOfTodo = [];
 
     for (let i = 0; i < todos.length; i++) {
       if (todos[i].checked === false) {
         // console.log(todos[i]);
-        len.push(todos[i]);
+        collectionOfTodo.push(todos[i]);
       }
       // console.log(len);
       // console.log(len.length);
     }
-    let lenn = len.length;
-    return lenn;
+    let todoLength = collectionOfTodo.length;
+    return todoLength;
   };
 
   useEffect(() => {
@@ -62,7 +65,9 @@ export default function Todo({ todos, add }) {
         console.log(todos[i].id);
         fetch("http://localhost:3000/todos/" + todos[i].id, {
           method: "DELETE",
-        }).then(() => add("http://localhost:3000/todos"));
+        })
+        .then(() => getdata("http://localhost:3000/todos"));
+        // .then(() => add("http://localhost:3000/todos"));
       }
       //  console.log(lenn);
     }
@@ -70,11 +75,11 @@ export default function Todo({ todos, add }) {
  
 
   const handleOnDrag = (result) => {
-   const  orderNew = Array.from(myTodo);
-    const [update] = orderNew.splice(result.source.index, 1);
-    orderNew.splice(result.destination.index, 0, update);
+   const  rearrangeTodo = Array.from(myTodo);
+    const [update] = rearrangeTodo.splice(result.source.index, 1);
+    rearrangeTodo.splice(result.destination.index, 0, update);
 
-    setMyTodo(orderNew);
+    setMyTodo(rearrangeTodo);
 
   };
  
@@ -84,7 +89,6 @@ export default function Todo({ todos, add }) {
   //   ii.filter((todo) => {
   //     return todo.checked !== true;
   //   }))
-   
   // };
 
   //  const handleCompleted = () => {
@@ -122,7 +126,6 @@ export default function Todo({ todos, add }) {
                     {(provided) => (
                       <li
                         id={todo.id}
-            
                         className="list-style border"
                         ref={provided.innerRef}
                         {...provided.draggableProps}
@@ -148,7 +151,7 @@ export default function Todo({ todos, add }) {
                           {todo.todo}
                         </p>
                         <p>{todo.checked}</p>
-                    
+
                         <img
                           src={close}
                           alt="a close icon to remove todo list"
@@ -165,9 +168,7 @@ export default function Todo({ todos, add }) {
       </DragDropContext>
       {/* <div className="length-wrap">
         {todos && <p className="length">{todos.length} items Left</p>}
-
-        <p className="clr-completed">Clear completed</p>
-      </div> */}
+       */}
 
       <div className="length-wrap">
         {todos && (
@@ -178,7 +179,8 @@ export default function Todo({ todos, add }) {
         <div className="show-wrap">
           <button
             className="all"
-            onClick={() => add("http://localhost:3000/todos")}
+            onClick={() => getdata("http://localhost:3000/todos")}
+            // onClick={() => add("http://localhost:3000/todos")}
           >
             All
           </button>
@@ -187,7 +189,8 @@ export default function Todo({ todos, add }) {
           </button> */}
           <button
             className="active"
-            onClick={() => add("http://localhost:3000/todos?checked=false")}
+            onClick={() => getdata("http://localhost:3000/todos?checked=false")}
+            // onClick={() => add("http://localhost:3000/todos?checked=false")}
           >
             Active
           </button>
@@ -200,7 +203,8 @@ export default function Todo({ todos, add }) {
 
           <button
             className="completed"
-            onClick={() => add("http://localhost:3000/todos?checked=true")}
+            onClick={() => getdata("http://localhost:3000/todos?checked=true")}
+            // onClick={() => add("http://localhost:3000/todos?checked=true")}
           >
             Completed
           </button>

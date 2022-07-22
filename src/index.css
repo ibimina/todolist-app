@@ -12,13 +12,13 @@ body {
   width: 100%;
   min-height: 100vh;
   font-size: 18px;
-  overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
 
 }
 .app {
   background-color: var(--bg-color);
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .light {

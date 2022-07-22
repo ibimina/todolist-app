@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export default function Create({ add }) {
+
+export default function Create({getdata}) {
   const [myTodo, setMyTodo] = useState("");
   const [checkbox, setCheckbox] = useState(false);
 
@@ -11,21 +12,20 @@ export default function Create({ add }) {
       const todo = {
         todo: myTodo,
         checked: false,
-      } 
+      };
       setCheckbox(true);
-      
+
       fetch("http://localhost:3000/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(todo),
-      }).then(() => add("http://localhost:3000/todos"));
-      
+      }).then(() => getdata("http://localhost:3000/todos"));
+      //.then(() => add("http://localhost:3000/todos"));
       // console.log(todo)
       setInterval(() => {
         setCheckbox(false);
       }, 500);
       setMyTodo("");
-      
     }
   };
 
